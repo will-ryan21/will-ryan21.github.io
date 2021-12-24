@@ -1,0 +1,44 @@
+/* TODO - pull these out into a base folder */
+@use "./base";
+
+$tooltip-width: 10rem;
+
+/* 
+* Core Tooltip specifications
+*/
+.tooltip {
+    position: relative;
+    background-color: base.$gray-dark-20;
+    color: base.$white-base;
+    padding: 0.5rem 0.75rem;
+    font-family: base.$base;
+    font-size: base.$body-minus-10;
+
+    z-index: 1;
+
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+/* 
+* This is for tooltips on top of the element
+*/
+.tooltip_top {
+    width: $tooltip-width;
+    bottom: 0.5rem;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -200%);
+}
+
+/* 
+* This is for tooltips on bottom of the element
+*/
+.tooltip_bottom {
+    width: $tooltip-width;
+    top: 0.5rem;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 0%);
+}

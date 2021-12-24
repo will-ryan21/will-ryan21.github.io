@@ -1,0 +1,1 @@
+import {Button} from '@my-scope/wryan21.multiflex-prime.ui.button';

@@ -1,0 +1,22 @@
+---
+description: 'This specifies the button variations usable as part of this system.'
+labels: ['actions', 'verb', 'tools']
+---
+
+import { Button } from './button';
+
+## React Button specification
+
+Buttons handle actions and can contain icons. You can have filled primary buttons or unfilled ghost buttons. If the button is disabled, you can include a message of how to enable it where appropriate.
+
+### Component usage
+```js
+<Button text="Click me" />
+```
+
+### Using props to customize the text
+
+Modify the text to see it change live:
+```js live
+<Button text="act through me" variance="ghost" />
+```

@@ -1,0 +1,131 @@
+/**
+* Color definitions
+* Primary
+*/
+$primary-base : #29A2BC;
+$primary-light-5 : lighten($primary-base, 5%);
+$primary-light-10 : lighten($primary-base, 10%);
+$primary-light-20 : lighten($primary-base, 20%);
+$primary-light-30 : lighten($primary-base, 30%);
+$primary-dark-10 : darken($primary-base, 10%);
+$primary-dark-20 : darken($primary-base, 20%);
+$primary-dark-30 : darken($primary-base, 30%);
+
+/**
+* Alternate
+*/
+$alt-base : #19A953;
+$alt-light-10 : lighten($alt-base, 10%);
+$alt-light-20 : lighten($alt-base, 20%);
+$alt-light-30 : lighten($alt-base, 30%);
+$alt-dark-10 : darken($alt-base, 10%);
+$alt-dark-20 : darken($alt-base, 20%);
+$alt-dark-30 : darken($alt-base, 30%);
+
+/**
+* Focus
+*/
+$info-base : #309BE8;
+$info-light-10 : lighten($info-base, 10%);
+$info-light-20 : lighten($info-base, 20%);
+$info-light-30 : lighten($info-base, 30%);
+$info-dark-10 : darken($info-base, 10%);
+$info-dark-20 : darken($info-base, 20%);
+$info-dark-30 : darken($info-base, 30%);
+
+/**
+* Warning
+*/
+$warn-base : #D67E3D;
+$warn-light-10 : lighten($warn-base, 10%);
+$warn-light-20 : lighten($warn-base, 20%);
+$warn-light-30 : lighten($warn-base, 30%);
+$warn-dark-10 : darken($warn-base, 10%);
+$warn-dark-20 : darken($warn-base, 20%);
+$warn-dark-30 : darken($warn-base, 30%);
+
+/**
+* Error
+*/
+$error-base : #C63939;
+$error-light-10 : lighten($error-base, 10%);
+$error-light-20 : lighten($error-base, 20%);
+$error-light-30 : lighten($error-base, 30%);
+$error-dark-10 : darken($error-base, 10%);
+$error-dark-20 : darken($error-base, 20%);
+$error-dark-30 : darken($error-base, 30%);
+
+/**
+* Gray
+*/
+$true-black-base : #000000;
+$black-base : #1A1A1A;
+$gray-dark-10 : lighten($black-base, 10%);
+$gray-dark-20 : lighten($black-base, 20%);
+$gray-dark-30 : lighten($black-base, 30%);
+$gray-dark-40 : lighten($black-base, 40%);
+$gray-dark-50 : lighten($black-base, 50%);
+
+$white-base : #ffffff;
+$gray-light-5 : darken($white-base, 5%);
+$gray-light-10 : darken($white-base, 10%);
+$gray-light-20 : darken($white-base, 20%);
+$gray-light-30 : darken($white-base, 30%);
+$gray-light-40 : darken($white-base, 40%);
+$gray-light-50 : darken($white-base, 50%);
+
+/* Export variables */
+:export { brand-primary: $primary-base; }
+:export { brand-alt: $alt-base; }
+:export { brand-info: $info-base; }
+:export { brand-warning: $warn-base; }
+:export { brand-error: $error-base; }
+:export { brand-white: $white-base; }
+:export { brand-black: $black-base; }
+:export { brand-disabled: $gray-light-30; }
+
+/**
+* Text definitions
+*/
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&family=Raleway:wght@600&family=Space+Mono&display=swap');
+
+$base : 'Oxygen', sans-serif;
+$heading : 'Raleway', sans-serif;
+$mono_numbers : 'Space Mono', sans-serif;
+
+$title: 3.75rem;
+$heading-plus-20: 3rem;
+$heading-plus-10: 2.5rem;
+$heading-base: 2rem;
+$heading-minus-10: 1.5rem;
+$heading-minus-20: 1.25rem;
+$heading-minus-30: 1rem;
+
+$body-plus-20: 1.5rem;
+$body-plus-10: 1.25rem;
+$body-base: 1rem;
+$body-minus-10: 0.75rem;
+$body-minus-20: 0.625rem;
+
+$button-size: $body-plus-10;
+
+/**
+* Shadows
+*/
+$shadow-base: 0 0 0.25rem 0 lighten($black-base, 75%);
+@mixin shadow-base($param) {
+    -webkit-box-shadow: $param;
+    -moz-box-shadow: $param;
+    box-shadow: $param;
+}
+
+$shadow-10: 0 0.25rem 0.125rem 0 lighten($black-base, 85%); 
+$shadow-20: 0 0.5rem 0.25rem 0 lighten($black-base, 85%); 
+$shadow-30: 0 0.75rem 0.625 0 lighten($black-base, 85%); 
+$shadow-40: 0 1rem 0.75rem 0 lighten($black-base, 85%); 
+$shadow-40: 0 1.25rem 1rem 0 lighten($black-base, 85%); 
+@mixin shadow-raised($base, $param) {
+    -webkit-box-shadow: $base, $param;
+    -moz-box-shadow: $base, $param;
+    box-shadow: $base, $param;
+}
